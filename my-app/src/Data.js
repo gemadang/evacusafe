@@ -46,11 +46,35 @@ class Data extends React.Component {
     }
     render() {
       return (
+          <h2> SEARCH AND RESCUE </h2>
           <ul>
               <div>
                 <p>PEOPLE</p>
                 { /* Render the list of people */
-                    this.state.people.map( person => <li key={person.id}>{person.text}</li> )
+
+                    this.state.people.map( person => <li key={person.id}>
+
+                        Person id: {person.id} 
+                        <ul>
+                            <li> Location 
+                                <ul>
+                                    <li>
+                                        {
+                                            JSON.parse(person.text)["lat"]
+                                        }
+                                    </li>
+                                
+                                    <li>
+                                        {
+                                            JSON.parse(person.text)["long"]
+                                        }
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        
+                    </li> )
                 }
                 
                 <p>SAFE</p>
