@@ -8,7 +8,6 @@ function Map() {
             defaultZoom={10} 
             defaultCenter={{ lat:45.5, lng:-75.8}}
         >
-		console.log(locationsData)
 	{locationsData.people.map(loc => (
 		<Marker
 			key={loc.properties.ID}
