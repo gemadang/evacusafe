@@ -1,4 +1,5 @@
 import React from "react";
+import "db.js";
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
 function Map() {
