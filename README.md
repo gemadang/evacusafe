@@ -1,2 +1,3 @@
 # evacusafe
-A messenger plugin for disaster use cases
+
+A Messenger chatbot/plugin for disaster use cases
