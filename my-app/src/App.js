@@ -139,7 +139,13 @@ onClick={() => {
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
-export default function App() {
+export default class App extends React.Component {
+	constructor(props) {
+  	    super(props);
+  	    this.state = { counter: 0 };
+	}
+
+render() {
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <MapWrapped
@@ -150,4 +156,5 @@ export default function App() {
       />
     </div>
   );
+}
 }
