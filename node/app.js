@@ -82,7 +82,7 @@ app.get('/webhook', function(req, res) {
  */
 app.post('/webhook', function (req, res) {
   var data = req.body;
-
+  console.log('verify', data);
   // Make sure this is a page subscription
   if (data.object == 'page') {
     // Iterate over each entry
@@ -142,6 +142,18 @@ app.get('/authorize', function(req, res) {
   });
 });
 
+
+
+
+// Handles messages events
+function handleMessage(sender_psid, received_message) {
+
+}
+
+// Handles messaging_postbacks events
+function handlePostback(sender_psid, received_postback) {
+
+}
 /*
  * Verify that the callback came from Facebook. Using the App Secret from
  * the App Dashboard, we can verify the signature that is sent with each
@@ -750,21 +762,21 @@ function sendQuickReply(recipientId) {
       id: recipientId
     },
     message: {
-      text: `Hello, this is SafetyBeacon, an evacuation assistant. Responding to me will give
-        me access to your location data. Are you currently in a safe location?
+      text: `Hello, this is SafetyBeacon, an evacuation assistant. Responding to me will give 
+      me access to your location data. Are you currently in a safe location?
 
       `
       ,
       quick_replies: [
         {
-          "content_type":"text",
-          "title":"Unsafe",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_ACTION"
+          "content_type":"location",
+          "title":"Unsafe test",
+          "payload":"danger test"
         },
         {
-          "content_type":"text",
-          "title":"Safe",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_COMEDY"
+          "content_type":"location",
+          "title":"Safe check",
+          "payload":"caution test"
         },
         
       ]
