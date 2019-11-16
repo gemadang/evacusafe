@@ -23,6 +23,7 @@ function Map() {
     window.addEventListener("keydown", listener);
 
     return () => {
+		
       window.removeEventListener("keydown", listener);
     };
   }, []);
@@ -140,6 +141,7 @@ onClick={() => {
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 
 export default function App() {
+
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <MapWrapped
