@@ -443,7 +443,11 @@ function sendHiMessage(recipientId) {
     },
     message: {
       text: `
-         Are you in a safe location?
+Congrats on setting up your Messenger Bot!
+
+Right now, your bot can only respond to a few words. Try out "quick reply", "typing on", "button", or "image" to see how they work. You'll find a complete list of these commands in the "app.js" file. Anything else you type will just be mirrored until you create additional commands.
+
+For more details on how to create commands, go to https://developers.facebook.com/docs/messenger-platform/reference/send-api.
       `
     }
   }
