@@ -46,6 +46,8 @@ class Data extends React.Component {
     }
     render() {
       return (
+          <div>
+              
           <h2> SEARCH AND RESCUE </h2>
           <ul>
               <div>
@@ -86,9 +88,10 @@ class Data extends React.Component {
                 { /* Render the list of people */
                     this.state.not_safe_areas.map( not_safe_area => <li key={not_safe_area.id}>{not_safe_area.text}</li> )
                 }
-              </div>
+            </div>
 
           </ul>
+          </div>
       );
     }
   }
