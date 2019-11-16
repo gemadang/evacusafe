@@ -1,0 +1,56 @@
+{
+    "people": {
+        "person-1": {
+            "timestamp": 1573927761759,
+            "mobile": 1,
+            "responder": 0,
+            "status": "safe",
+            "lat": 37.7874962,
+            "long": -122.3964496
+        },
+        "person-2": {
+            "timestamp": 1573927761759,
+            "mobile": 1,
+            "responder": 0,
+            "status": "safe",
+            "lat": 37.7874962,
+            "long": -122.3964496
+        },
+        "person-3": {
+            "timestamp": 1573927761759,
+            "mobile": 1,
+            "responder": 0,
+            "status": "safe",
+            "lat": 37.7874962,
+            "long": -122.3964496
+        },
+        "person-4": {
+            "timestamp": 1573927761759,
+            "mobile": 1,
+            "responder": 0,
+            "status": "safe",
+            "lat": 37.7874962,
+            "long": -122.3964496
+        },
+        "person-5": {
+            "timestamp": 1573927761759,
+            "mobile": 1,
+            "responder": 0,
+            "status": "safe",
+            "lat": 37.7874962,
+            "long": -122.3964496
+        }
+    },
+    "safe": {
+        "1": {
+            "lat": 37.7874962,
+            "long": -122.3964496
+        }
+    },
+    "not-safe": {
+        "1": {
+            "lat": 37.7874962,
+            "long": -122.3964496
+        }
+    }
+}
