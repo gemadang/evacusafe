@@ -16,6 +16,10 @@ function Map() {
 				lat:park.geometry.coordinates[1],
 				lng:park.geometry.coordinates[0]
 			}}
+            icon={{
+              url: "/red.png",
+              scaledSize: new window.google.maps.Size(25,45)
+            }}
 		/>
 	))}
 	
