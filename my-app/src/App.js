@@ -1,6 +1,6 @@
 import React from "react";
 import { GoogleMap, withScriptjs, withGoogleMap, Marker } from "react-google-maps";
-import * as parksData from "./data/skateboard-parks.json";
+import * as locationsData from "./data/skateboard-parks.json";
 
 function Map() {
     return ( 
@@ -9,16 +9,55 @@ function Map() {
             defaultCenter={{ lat:45, lng:-75}}
         >
 		console.log(locationsData)
-	{parksData.features.map(park => (
+	{locationsData.people.map(loc => (
 		<Marker
-			key={park.properties.PARK_ID}
+			key={loc.properties.ID}
 			position={{
-				lat:park.geometry.coordinates[1],
-				lng:park.geometry.coordinates[0]
+				lat:loc.geometry.coordinates[1],
+				lng:loc.geometry.coordinates[0]
+			}}
+            icon={{
+              url: "/green.png",
+              scaledSize: new window.google.maps.Size(25,45)
+            }}
+		/>
+	))}
+	{locationsData.crs.map(loc => (
+		<Marker
+			key={loc.properties.ID}
+			position={{
+				lat:loc.geometry.coordinates[1],
+				lng:loc.geometry.coordinates[0]
 			}}
             icon={{
               url: "/red.png",
               scaledSize: new window.google.maps.Size(25,45)
+            }}
+		/>
+	))}
+	{locationsData.type.map(loc => (
+		<Marker
+			key={loc.properties.ID}
+			position={{
+				lat:loc.geometry.coordinates[1],
+				lng:loc.geometry.coordinates[0]
+			}}
+            icon={{
+              url: "/blue.png",
+              scaledSize: new window.google.maps.Size(45,45)
+            }}
+		/>
+	))}
+	{locationsData.responders.map(loc => (
+		<Marker
+			key={loc.properties.ID}
+			position={{
+				lat:loc.geometry.coordinates[1],
+				lng:loc.geometry.coordinates[0]
+			}}
+            icon={{
+              url: "/black.png",
+              scaledSize: new window.google.maps.Size(45,45)
             }}
 		/>
 	))}
