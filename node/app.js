@@ -81,15 +81,15 @@ app.get('/webhook', function(req, res) {
  *
  */
 app.post('/webhook', function (req, res) {
-  let data = req.body;
+  var data = req.body;
 
   // Make sure this is a page subscription
   if (data.object == 'page') {
     // Iterate over each entry
     // There may be multiple if batched
     data.entry.forEach(function(pageEntry) {
-      let pageID = pageEntry.id;
-      let timeOfEvent = pageEntry.time;
+      var pageID = pageEntry.id;
+      var timeOfEvent = pageEntry.time;
 
       // Iterate over each messaging event
       pageEntry.messaging.forEach(function(messagingEvent) {
