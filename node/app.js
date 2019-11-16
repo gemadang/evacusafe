@@ -260,6 +260,10 @@ function receivedMessage(event) {
         sendHiMessage(senderID);
         break;
 
+       case 'help':
+        sendQuickReply(senderID);
+        break;
+
       case 'image':
         requiresServerURL(sendImageMessage, [senderID]);
         break;
@@ -746,23 +750,23 @@ function sendQuickReply(recipientId) {
       id: recipientId
     },
     message: {
-      text: "What's your favorite movie genre?",
+      text: `Hello, this is SafetyBeacon, an evacuation assistant. Responding to me will give
+        me access to your location data. Are you currently in a safe location?
+
+      `
+      ,
       quick_replies: [
         {
           "content_type":"text",
-          "title":"Action",
+          "title":"Unsafe",
           "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_ACTION"
         },
         {
           "content_type":"text",
-          "title":"Comedy",
+          "title":"Safe",
           "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_COMEDY"
         },
-        {
-          "content_type":"text",
-          "title":"Drama",
-          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_DRAMA"
-        }
+        
       ]
     }
   };
