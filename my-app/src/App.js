@@ -96,7 +96,7 @@ onClick={() => {
 	setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
-              url: "/black.png",
+              url: "/yellow.png",
               scaledSize: new window.google.maps.Size(45,45)
             }}
 		/>
@@ -228,7 +228,7 @@ export default class App extends React.Component {
 					/>
 				</div>
 
-			<div style={{ paddingRight: "5em", float: "right", justifyContent: "space-evenly", display: "flex" }}> 
+			<div style={{paddingLeft: "4em", justifyContent: "space-center", display: "flex" }}> 
 					<div class="box red">
 					</div>
 						Persons in Dangerous Areas
@@ -238,7 +238,11 @@ export default class App extends React.Component {
 					<div class="box blue">
 					</div>
 						Emergency Responders
-				
+					<div class="box yellow">
+					</div>
+						Persons Immobalized
+					<img style={{ height: "2em", marginLeft: "2em", marginRight: "1em"}} src="./white.png"></img>
+						Evacuation Centers
 			</div>
 		</div>
 		
