@@ -15,8 +15,6 @@ import fire from './fire';
 function Map(props) {
   const [selectedPark, setSelectedPark] = useState(null);
 
-	// console.log(props.persons);
-
   useEffect(() => {
     const listener = e => {
       if (e.key === "Escape") {
@@ -104,7 +102,6 @@ onClick={() => {
 		/>
 	))}
 	
-	//console.log(JSON.parse(props.safeloc.text))
 	{
 
 	props.safeloc.map(loc => (
@@ -215,20 +212,24 @@ export default class App extends React.Component {
 
 	render() {
 	return (
-		<div style={{ width: "100vw", height: "100vh" }}>
-		<MapWrapped
-			safeloc = {this.state.safe_areas}
-			responders = {this.state.responders}
-			type = {this.state.extra}
-			crs = {this.state.not_safe_areas}
-			people = {this.state.people}
-			googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
-			loadingElement={<div style={{ height: `100%` }} />}
-			containerElement={<div style={{ height: `100%` }} />}
-			mapElement={<div style={{ height: `100%` }} />}
-			test={"potato"}
-		/>
+		<div>
+			<h5> SAFETY BEACON</h5>
+			<div style={{ margin: "8em", width: "80vw", height: "80vh" }}>
+			<MapWrapped
+				safeloc = {this.state.safe_areas}
+				responders = {this.state.responders}
+				type = {this.state.extra}
+				crs = {this.state.not_safe_areas}
+				people = {this.state.people}
+				googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
+				loadingElement={<div style={{ height: `100%` }} />}
+				containerElement={<div style={{ height: `100%` }} />}
+				mapElement={<div style={{ height: `100%` }} />}
+			/>
+			</div>
+
 		</div>
+		
 	);
 }
 }
