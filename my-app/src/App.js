@@ -164,7 +164,7 @@ export default class App extends React.Component {
 		//
 		// reference to RESPONDERS in firebase database
 		//
-		let safe_areas_ref = fire.database().ref('responders').orderByKey().limitToLast(100);
+		safe_areas_ref = fire.database().ref('responders').orderByKey().limitToLast(100);
 		safe_areas_ref.on('child_added', snapshot => {
 		  /* Update React state  */
 		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
@@ -175,7 +175,7 @@ export default class App extends React.Component {
 		//
 		// reference to EXTRA in firebase database
 		//
-		let safe_areas_ref = fire.database().ref('type').orderByKey().limitToLast(100);
+		safe_areas_ref = fire.database().ref('type').orderByKey().limitToLast(100);
 		safe_areas_ref.on('child_added', snapshot => {
 		  /* Update React state  */
 		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
