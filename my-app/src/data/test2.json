@@ -1,6 +1,6 @@
 {
     "people": {
-        "person-1": {
+        "personone": {
             "timestamp": 1573927761759,
             "mobile": 1,
             "responder": 0,
@@ -8,7 +8,7 @@
             "lat": 37.7874962,
             "long": -122.3964496
         },
-        "person-2": {
+        "persontwo": {
             "timestamp": 1573927761759,
             "mobile": 1,
             "responder": 0,
@@ -16,7 +16,7 @@
             "lat": 37.7874962,
             "long": -122.3964496
         },
-        "person-3": {
+        "personthree": {
             "timestamp": 1573927761759,
             "mobile": 1,
             "responder": 0,
@@ -24,7 +24,7 @@
             "lat": 37.7874962,
             "long": -122.3964496
         },
-        "person-4": {
+        "personfour": {
             "timestamp": 1573927761759,
             "mobile": 1,
             "responder": 0,
@@ -32,7 +32,7 @@
             "lat": 37.7874962,
             "long": -122.3964496
         },
-        "person-5": {
+        "personfive": {
             "timestamp": 1573927761759,
             "mobile": 1,
             "responder": 0,

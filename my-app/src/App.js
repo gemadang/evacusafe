@@ -146,9 +146,53 @@ const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {people: [], safe_areas: [], not_safe_areas: []};
+		this.state = {people: [], safe_areas: [], not_safe_areas: [], responders: [], extra: []};
 	}
 	componentWillMount(){
+
+
+		//
+		// reference to SAFE in firebase database
+		//
+		let safe_areas_ref = fire.database().ref('safeloc').orderByKey().limitToLast(100);
+		safe_areas_ref.on('child_added', snapshot => {
+		  /* Update React state  */
+		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
+		  this.setState({ safe_areas: [safe_area].concat(this.state.safe_areas) });
+		})
+
+		//
+		// reference to RESPONDERS in firebase database
+		//
+		let safe_areas_ref = fire.database().ref('responders').orderByKey().limitToLast(100);
+		safe_areas_ref.on('child_added', snapshot => {
+		  /* Update React state  */
+		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
+		  this.setState({ responders: [safe_area].concat(this.state.responders) });
+		})
+
+
+		//
+		// reference to EXTRA in firebase database
+		//
+		let safe_areas_ref = fire.database().ref('type').orderByKey().limitToLast(100);
+		safe_areas_ref.on('child_added', snapshot => {
+		  /* Update React state  */
+		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
+		  this.setState({ extra: [safe_area].concat(this.state.extra) });
+		})
+
+
+		//
+		// reference to NOTSAGE in firebase database
+		//
+		let not_safe_areas_ref = fire.database().ref('crs').orderByKey().limitToLast(100);
+		not_safe_areas_ref.on('child_added', snapshot => {
+		  /* Update React state e */
+		  let not_safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
+		  this.setState({ not_safe_areas: [not_safe_area].concat(this.state.not_safe_areas) });
+		})
+
 		//
 		// reference to PEOPLE in firebase database
 		//
@@ -159,35 +203,20 @@ export default class App extends React.Component {
 		  this.setState({ people: [person].concat(this.state.people) });
 		})
   
-		//
-		// reference to SAFE in firebase database
-		//
-		let safe_areas_ref = fire.database().ref('safe').orderByKey().limitToLast(100);
-		safe_areas_ref.on('child_added', snapshot => {
-		  /* Update React state  */
-		  let safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
-		  this.setState({ safe_areas: [safe_area].concat(this.state.safe_areas) });
-		})
+
   
   
-		//
-		// reference to NOTSAGE in firebase database
-		//
-		let not_safe_areas_ref = fire.database().ref('notsafe').orderByKey().limitToLast(100);
-		not_safe_areas_ref.on('child_added', snapshot => {
-		  /* Update React state e */
-		  let not_safe_area = { text: JSON.stringify(snapshot.val()), id: snapshot.key };
-		  this.setState({ not_safe_areas: [not_safe_area].concat(this.state.not_safe_areas) });
-		})
 	  }
 
 	render() {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 		<MapWrapped
-			persons = {this.state.persons}
-			safe_areas = {this.state.safe_areas}
-			not_safe_areas = {this.state.not_safe_areas}
+			safeloc = {this.state.safe_areas}
+			responders = {this.state.responders}
+			type = {this.state.extra}
+			crs = {this.state.not_safe_areas}
+			people = {this.state.people}
 			googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
 			loadingElement={<div style={{ height: `100%` }} />}
 			containerElement={<div style={{ height: `100%` }} />}
