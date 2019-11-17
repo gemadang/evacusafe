@@ -89,8 +89,8 @@ function Map(props) {
 		<Marker
 		key={JSON.parse(loc["text"])["properties"]["ID"]}
 		position={{
-			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
-			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1].toString(),
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0].toString()
 		}}
 onClick={() => {
             setSelectedPark(loc);
@@ -108,8 +108,8 @@ onClick={() => {
 		<Marker
 			key={JSON.parse(loc["text"])["properties"]["ID"]}
 			position={{
-				lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
-				lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+				lat:parseFloat(JSON.parse(loc["text"])["geometry"]["coordinates"][1]),
+				lng:parseFloat(JSON.parse(loc["text"])["geometry"]["coordinates"][0])
 			}}
 onClick={() => {
             setSelectedPark(JSON.parse(loc["text"]));
@@ -215,6 +215,7 @@ export default class App extends React.Component {
 		<div>
 			<h5> SAFETY BEACON</h5>
 			<div style={{ margin: "8em", width: "80vw", height: "80vh" }}>
+				<div>{JSON.stringify(this.state.safe_areas)}</div>
 			<MapWrapped
 				safeloc = {this.state.safe_areas}
 				responders = {this.state.responders}
