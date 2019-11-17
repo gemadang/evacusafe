@@ -103,15 +103,19 @@ onClick={() => {
             }}
 		/>
 	))}
-	{locationsData.safeloc.map(loc => (
+	
+	//console.log(JSON.parse(props.safeloc.text))
+	{
+
+	props.safeloc.map(loc => (
 		<Marker
-			key={loc.properties.ID}
+			key={JSON.parse(loc["text"])["properties"]["ID"]}
 			position={{
-				lat:loc.geometry.coordinates[1],
-				lng:loc.geometry.coordinates[0]
+				lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+				lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 			}}
 onClick={() => {
-            setSelectedPark(loc);
+            setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
               url: "/logo.png",
@@ -132,7 +136,7 @@ onClick={() => {
           }}
         >
           <div>
-
+	    <h1>{typeof(props.safeloc)}</h1>
             <p>{selectedPark.geometry.coordinates[0]}</p>
             <p>{selectedPark.geometry.coordinates[1]}</p>
           </div>
