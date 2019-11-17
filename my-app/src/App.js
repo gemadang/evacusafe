@@ -43,7 +43,7 @@ function Map(props) {
 			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 		}}
           onClick={() => {
-            setSelectedPark(loc);
+			setSelectedPark(JSON.parse(loc["text"]));
           }}
 
             icon={{
@@ -60,7 +60,7 @@ function Map(props) {
 			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 		}}
 	    onClick={() => {
-            setSelectedPark(loc);
+            setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
               url: "/red.png",
@@ -77,7 +77,7 @@ function Map(props) {
 			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 		}}
 	onClick={() => {
-            setSelectedPark(loc);
+		setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
               url: "/blue.png",
@@ -89,11 +89,11 @@ function Map(props) {
 		<Marker
 		key={JSON.parse(loc["text"])["properties"]["ID"]}
 		position={{
-			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1].toString(),
-			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0].toString()
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 		}}
 onClick={() => {
-            setSelectedPark(loc);
+	setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
               url: "/black.png",
@@ -108,8 +108,8 @@ onClick={() => {
 		<Marker
 			key={JSON.parse(loc["text"])["properties"]["ID"]}
 			position={{
-				lat:parseFloat(JSON.parse(loc["text"])["geometry"]["coordinates"][1]),
-				lng:parseFloat(JSON.parse(loc["text"])["geometry"]["coordinates"][0])
+				lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+				lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
 			}}
 onClick={() => {
             setSelectedPark(JSON.parse(loc["text"]));
@@ -133,9 +133,8 @@ onClick={() => {
           }}
         >
           <div>
-	    <h1>{typeof(props.safeloc)}</h1>
-            <p>{selectedPark.geometry.coordinates[0]}</p>
-            <p>{selectedPark.geometry.coordinates[1]}</p>
+            <p>LATITUDE: {selectedPark.geometry.coordinates[0]}</p>
+            <p>LONGITUDE: {selectedPark.geometry.coordinates[1]}</p>
           </div>
         </InfoWindow>
       )}
@@ -212,10 +211,10 @@ export default class App extends React.Component {
 
 	render() {
 	return (
-		<div>
-			<h5> SAFETY BEACON</h5>
-			<div style={{ margin: "8em", width: "80vw", height: "80vh" }}>
-				<div>{JSON.stringify(this.state.safe_areas)}</div>
+		<div >
+			<h1 style={{ paddingTop: "3em", textAlign: "center", color: "red" }}> SAFETY BEACON</h1>
+			<div style={{ paddingTop: "-2em", margin: "8em", width: "80vw", height: "80vh" }}>
+				{/* <div>{JSON.stringify(this.state.safe_areas)}</div> */}
 			<MapWrapped
 				safeloc = {this.state.safe_areas}
 				responders = {this.state.responders}
@@ -229,6 +228,9 @@ export default class App extends React.Component {
 			/>
 			</div>
 
+			<div>
+				
+			</div>
 		</div>
 		
 	);
