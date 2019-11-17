@@ -32,7 +32,7 @@ function Map(props) {
   return (
     <GoogleMap
       defaultZoom={10}
-      defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
+      defaultCenter={{ lat: 38.5052, lng: -122.4704 }}
       defaultOptions={{ styles: mapStyles }}
     >
 	{props.people.map(loc => (
