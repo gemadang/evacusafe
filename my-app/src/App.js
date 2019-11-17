@@ -212,23 +212,32 @@ export default class App extends React.Component {
 	render() {
 	return (
 		<div >
-			<h1 style={{ paddingTop: "3em", textAlign: "center", color: "red" }}> SAFETY BEACON</h1>
-			<div style={{ paddingTop: "-2em", margin: "8em", width: "80vw", height: "80vh" }}>
-				{/* <div>{JSON.stringify(this.state.safe_areas)}</div> */}
-			<MapWrapped
-				safeloc = {this.state.safe_areas}
-				responders = {this.state.responders}
-				type = {this.state.extra}
-				crs = {this.state.not_safe_areas}
-				people = {this.state.people}
-				googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
-				loadingElement={<div style={{ height: `100%` }} />}
-				containerElement={<div style={{ height: `100%` }} />}
-				mapElement={<div style={{ height: `100%` }} />}
-			/>
-			</div>
+				<h1 style={{ paddingTop: "2em", textAlign: "center", color: "red" }}> SAFETY BEACON</h1>
+				<div style={{ paddingTop: "-2em", margin: "5em", width: "85vw", height: "50vh" }}>
+					
+					<MapWrapped
+						safeloc = {this.state.safe_areas}
+						responders = {this.state.responders}
+						type = {this.state.extra}
+						crs = {this.state.not_safe_areas}
+						people = {this.state.people}
+						googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
+						loadingElement={<div style={{ height: `100%` }} />}
+						containerElement={<div style={{ height: `100%` }} />}
+						mapElement={<div style={{ height: `100%` }} />}
+					/>
+				</div>
 
-			<div>
+			<div style={{ paddingRight: "5em", float: "right", justifyContent: "space-evenly", display: "flex" }}> 
+					<div class="box red">
+					</div>
+						Persons in Dangerous Areas
+					<div class="box green">				
+					</div>
+						Persons in Safe Areas
+					<div class="box blue">
+					</div>
+						Emergency Responders
 				
 			</div>
 		</div>
