@@ -37,13 +37,13 @@ function Map(props) {
       defaultCenter={{ lat: 45.4211, lng: -75.6903 }}
       defaultOptions={{ styles: mapStyles }}
     >
-	{locationsData.people.map(loc => (
+	{props.people.map(loc => (
 		<Marker
-			key={loc.properties.ID}
-			position={{
-				lat:loc.geometry.coordinates[1],
-				lng:loc.geometry.coordinates[0]
-			}}
+		key={JSON.parse(loc["text"])["properties"]["ID"]}
+		position={{
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+		}}
           onClick={() => {
             setSelectedPark(loc);
           }}
@@ -54,13 +54,13 @@ function Map(props) {
             }}
 		/>
 	))}
-	{locationsData.crs.map(loc => (
+	{props.crs.map(loc => (
 		<Marker
-			key={loc.properties.ID}
-			position={{
-				lat:loc.geometry.coordinates[1],
-				lng:loc.geometry.coordinates[0]
-			}}
+		key={JSON.parse(loc["text"])["properties"]["ID"]}
+		position={{
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+		}}
 	    onClick={() => {
             setSelectedPark(loc);
           }}
@@ -71,13 +71,13 @@ function Map(props) {
 	
 		/>
 	))}
-	{locationsData.type.map(loc => (
+	{props.type.map(loc => (
 		<Marker
-			key={loc.properties.ID}
-			position={{
-				lat:loc.geometry.coordinates[1],
-				lng:loc.geometry.coordinates[0]
-			}}
+		key={JSON.parse(loc["text"])["properties"]["ID"]}
+		position={{
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+		}}
 	onClick={() => {
             setSelectedPark(loc);
           }}
@@ -87,13 +87,13 @@ function Map(props) {
             }}
 		/>
 	))}
-	{locationsData.responders.map(loc => (
+	{props.responders.map(loc => (
 		<Marker
-			key={loc.properties.ID}
-			position={{
-				lat:loc.geometry.coordinates[1],
-				lng:loc.geometry.coordinates[0]
-			}}
+		key={JSON.parse(loc["text"])["properties"]["ID"]}
+		position={{
+			lat:JSON.parse(loc["text"])["geometry"]["coordinates"][1],
+			lng:JSON.parse(loc["text"])["geometry"]["coordinates"][0]
+		}}
 onClick={() => {
             setSelectedPark(loc);
           }}
