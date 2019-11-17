@@ -16,7 +16,8 @@ const
   crypto = require('crypto'),
   express = require('express'),
   https = require('https'),
-  request = require('request');
+  request = require('request'),
+  axios = require('axios');
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -142,7 +143,17 @@ app.get('/authorize', function(req, res) {
   });
 });
 
+async function fireCall() {
+  let fire = await axios.get('https://evacusafe-e8133.firebaseio.com/safeloc.json');
+  console.log('firebase loc', fire.data);
+  return fire.data;
 
+}
+
+async function fireAdd() {
+  
+
+}
 
 
 // Handles messages events
@@ -245,6 +256,7 @@ function receivedMessage(event) {
   // You may get a text or attachment but not both
   var messageText = message.text;
   var messageAttachments = message.attachments;
+  var timestamp = message.timestamp;
   var quickReply = message.quick_reply;
 
   if (isEcho) {
@@ -254,7 +266,8 @@ function receivedMessage(event) {
     return;
   } else if (quickReply) {
     var quickReplyPayload = quickReply.payload;
-    console.log("Quick reply for message %s with payload %s",
+    console.log('rapid fire');
+    console.log("2Quick reply for message %s with payload %s",
       messageId, quickReplyPayload);
 
     sendTextMessage(senderID, "Quick reply tapped");
@@ -273,7 +286,7 @@ function receivedMessage(event) {
         break;
 
        case 'help':
-        sendQuickReply(senderID);
+        sendButtonMessage(senderID);
         break;
 
       case 'image':
@@ -332,6 +345,11 @@ function receivedMessage(event) {
         sendTextMessage(senderID, messageText);
     }
   } else if (messageAttachments) {
+    //let location = message.attachments.payload.coordinates;
+    console.log('time', timestamp);
+    console.log('CHECK', messageAttachments);
+    console.log('payload CHE', messageAttachments[0].payload);
+    //console.log('coordinates', messageAttachments.payload.coordinates);
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
@@ -604,6 +622,14 @@ function sendTextMessage(recipientId, messageText) {
  *
  */
 function sendButtonMessage(recipientId) {
+  let safeLoc = "43.12345,-76.12345";
+
+  fireCall()
+     .then((result)=>{
+        safeLoc = result
+     });
+
+  let demoUserLoc = "38.705048, -122.874867"
   var messageData = {
     recipient: {
       id: recipientId
@@ -613,19 +639,11 @@ function sendButtonMessage(recipientId) {
         type: "template",
         payload: {
           template_type: "button",
-          text: "This is test text",
+          text: "Here you go:",
           buttons:[{
             type: "web_url",
-            url: "https://www.oculus.com/en-us/rift/",
-            title: "Open Web URL"
-          }, {
-            type: "postback",
-            title: "Trigger Postback",
-            payload: "DEVELOPER_DEFINED_PAYLOAD"
-          }, {
-            type: "phone_number",
-            title: "Call Phone Number",
-            payload: "+16505551234"
+            url: `https://www.google.com/maps?saddr=${demoUserLoc}&daddr=${safeLoc}`,
+            title: "Route to Safe Location"
           }]
         }
       }
@@ -757,27 +775,33 @@ function sendReceiptMessage(recipientId) {
  *
  */
 function sendQuickReply(recipientId) {
+
+   fireCall()
+     .then((result)=>{
+        console.log('outer', result)
+     });
+
+
   var messageData = {
     recipient: {
       id: recipientId
     },
     message: {
-      text: `Hello, this is SafetyBeacon, an evacuation assistant. Responding to me will give 
-      me access to your location data. Are you currently in a safe location?
+      text: `Hello, this is SafetyBeacon, an evacuation assistant. Respond to me for directions to safety
 
       `
       ,
       quick_replies: [
         {
-          "content_type":"location",
-          "title":"Unsafe test",
-          "payload":"danger test"
+          "content_type":"text",
+          "title":"Get Safe Route",
+          "payload":"location"
         },
-        {
-          "content_type":"location",
-          "title":"Safe check",
-          "payload":"caution test"
-        },
+        // {
+        //   "content_type":"text",
+        //   "title":"Safe check",
+        //   "payload":"location"
+        // },
         
       ]
     }
