@@ -1,462 +1,343 @@
 {
-  "safeloc":
-   [
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.80736446380615,
-          38.81526834526926
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.77380466461182,
-          38.779848288106336
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.71071910858154,
-          38.73356499750139
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.70029067993164,
-          38.72998289920312
-      ]
-       }
-     }  
-    ], 
-  "responders":
-   [
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.68170833587646,
-          38.72690282060324
-      ]
-       }
-     }  
-    ],
-   "type": [
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.68587112426758,
-          38.71016094120665
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.67617225646973,
-          38.705807410190005
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.6687479019165,
-          38.68721820006627
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.66651630401611,
-          38.663933007400146
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.65801906585693,
-          38.65213675404965
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.66398429870605,
-          38.64013743553673
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":  [
-          -122.6757001876831,
-          38.63403645291922
-      ]
-       }
-     }  
-    ],
-   "crs": [
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":   [
-          -122.67192363739014,
-          38.63128748886464
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.68917560577393,
-          38.62511869808415
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.6923942565918,
-          38.6215311680906
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":[
-          -122.70290851593018,
-          38.60677682198576
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.70329475402832,
-          38.60369143877102
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":                         [
-          -122.7042818069458,
-          38.60003575870576
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.70200729370117,
-          38.59617864668084
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":  [
-          -122.70303726196289,
-          38.59282446774782
-      ]
-       }
-     }  
-    ],
-   "people": [
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.70183563232422,
-          38.57252834314488
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.71303653717041,
-          38.56940793439853
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.76848316192627,
-          38.52789025480715
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.78101444244385,
-          38.55340112724639
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":  [
-          -122.79376029968262,
-          38.56917305943884
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":  [
-          -122.82410144805908,
-          38.5762860748699
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates": [
-          -122.83586025238037,
-          38.59466928555511
-      ]
-       }
-     },
-     {
-       "type": "Feature",
-       "properties": {
-         "ID": 960,
-         "safe":true,
-         "mobile":true,
-         "responder":true
-       },
-       "geometry": {
-         "timestamp": "8:31",
-         "coordinates":  [
-          -122.83088207244873,
-          38.6099626763025
-      ]
-       }
-     }
-   ]
- }
+  "crs" : [ {
+    "geometry" : {
+      "coordinates" : [ -122.2363739014, 38.8748886464 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.393, 38.9808415 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.69942565918, 38.6211680906 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.701593018, 38.7682198576 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.475402832, 38.60877102 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.3164, 38.7220312 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.7729370117, 38.5964668084 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.73726196289, 38.5926774782 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  } ],
+  "people" : [ {
+    "geometry" : {
+      "coordinates" : [ -122.763232422, 38.5724314488 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.7653717041, 38.40793439853 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.48316192627, 38.9025480715 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.1444244385, 38.112724639 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.6029968262, 38.5305943884 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.410144805908, 38.2860748699 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.6025238037, 38.66928555511 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.088207244873, 38.626763025 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  } ],
+  "responders" : [ {
+    "geometry" : {
+      "coordinates" : [ -122.3587646, 38.7282060324 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  } ],
+  "safeloc" : [ {
+    "geometry" : {
+      "coordinates" : [ -122.736446380615, 38.826834526926 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.466461182, 38.779848288106336 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.71071910858154, 38.9750139 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.818069458, 38.03575870576 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  } ],
+  "type" : [ {
+    "geometry" : {
+      "coordinates" : [ -122.7112426758, 38.94120665 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.17225646973, 38.7010190005 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.479019165, 38.21820006627 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.1630401611, 38.33007400146 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.65801906585693, 38.65213675404965 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.629870605, 38.643743553673 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -122.7001876831, 38.291922 ],
+      "timestamp" : "8:31"
+    },
+    "properties" : {
+      "ID" : 960,
+      "mobile" : true,
+      "responder" : true,
+      "safe" : true
+    },
+    "type" : "Feature"
+  } ]
+}

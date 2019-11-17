@@ -115,7 +115,7 @@ onClick={() => {
             setSelectedPark(JSON.parse(loc["text"]));
           }}
             icon={{
-              url: "/logo.png",
+			  url: "/white.png",
               scaledSize: new window.google.maps.Size(45,45)
             }}
 		/>
