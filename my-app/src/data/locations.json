@@ -81,6 +81,32 @@
       },
       "geometry": {
         "timestamp": "8:31",
+        "coordinates": [-75.78731628, 45.33536272049]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 960,
+        "safe":true,
+        "mobile":true,
+        "responder":true
+      },
+      "geometry": {
+        "timestamp": "8:31",
+        "coordinates": [-75.75731628, 45.32536272049]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 960,
+        "safe":true,
+        "mobile":true,
+        "responder":true
+      },
+      "geometry": {
+        "timestamp": "8:31",
         "coordinates": [-75.77731628, 45.31536272049]
       }
     },

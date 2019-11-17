@@ -12,7 +12,7 @@ import * as locationsData from "./data/locations.json";
 
 import fire from './fire';
 
-function Map() {
+function Map(props) {
   const [selectedPark, setSelectedPark] = useState(null);
 
 	// console.log(props.persons);
@@ -132,8 +132,9 @@ onClick={() => {
           }}
         >
           <div>
-            <h2>{selectedPark.properties.ID}</h2>
-            <p>{selectedPark.properties.lat}</p>
+
+            <p>{selectedPark.geometry.coordinates[0]}</p>
+            <p>{selectedPark.geometry.coordinates[1]}</p>
           </div>
         </InfoWindow>
       )}
@@ -185,13 +186,14 @@ export default class App extends React.Component {
 	return (
 		<div style={{ width: "100vw", height: "100vh" }}>
 		<MapWrapped
-			persons = {this.state.persons}
+			people = {this.state.people}
 			safe_areas = {this.state.safe_areas}
 			not_safe_areas = {this.state.not_safe_areas}
 			googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp6libraries=geometry,drawing,places&key=AIzaSyBGW1DRYbhOUcZjsxLUE-pOeVE_6KbFQ20'}
 			loadingElement={<div style={{ height: `100%` }} />}
 			containerElement={<div style={{ height: `100%` }} />}
 			mapElement={<div style={{ height: `100%` }} />}
+			test={"potato"}
 		/>
 		</div>
 	);
