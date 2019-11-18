@@ -240,7 +240,7 @@ export default class App extends React.Component {
 						Emergency Responders
 					<div class="box yellow">
 					</div>
-						Persons Immobalized
+						Persons Immobilized
 					<img style={{ height: "2em", marginLeft: "2em", marginRight: "1em"}} src="./white.png"></img>
 						Evacuation Centers
 			</div>
